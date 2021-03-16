@@ -171,8 +171,8 @@ get_header();
 		<section class="specialists-block">
 			<div class="container">
 				<h2>Наши специалисты</h2>
-				<div class="swiper-container">
-					<div class="specialists swiper-wrapper">
+				<div class="swiper-container-specialists">
+					<div class="specialists swiper-wrapper swiper-wrapper-specialists">
 						<?php // параметры по умолчанию
 						$posts = get_posts( array(
 							'numberposts' => 0,
@@ -207,14 +207,13 @@ get_header();
 			    	<div class="swiper-button-prev"></div>
 				</div>
 			</div>
-		     <!-- Swiper JS -->
-			    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		     
 
 			    <!-- Initialize Swiper -->
 			    <script>
-			      var swiper = new Swiper(".swiper-container", {
+			      var swiper = new Swiper(".swiper-container-specialists", {
 			        slidesPerView: 3,
-			        spaceBetween: 30,
+			        spaceBetween: 70,
 			        navigation: {
 			          nextEl: ".swiper-button-next",
 			          prevEl: ".swiper-button-prev"
@@ -225,45 +224,58 @@ get_header();
 			    </script>
 		</section>
 
-		<section class="on departure">
+		<section class="on-departure">
 			<div class="container">
 				<h2>Массаж на выезд</h2>
+				<div class="content">
+					<div class="text">
+						<p>Студия массажа «Mio Massage Studio» предлагает услуги массажиста  с выездом на дом в Москве. К услугам клиентов —  индивидуальный подход и гарантированное качество массажа!</p>
+						<p>Оставь заявку прямо сейчас!</p>
+					</div>
+					<div class="image"></div>
+				</div>
+				<a class="btn-pink" href="ссылка на запись">Оставить заявку</a>
 			</div>
 		</section>
 
-		<section class="feedback">
+		<section class="feedback-block">
 			<div class="container">
 				<h2>Отзывы о нас</h2>
+				<a class="btn-pink" href="форма с отзывами">Оставьте свой отзыв</a>
+				<div class="swiper-container-feedback feedback-slider-container">
+					<div class="feedback swiper-wrapper swipper-wrapper-feedback">
+						<div class="single-feedback swiper-slide-feedback">
+							<img src="wp-content/themes/mms/assets/images/phone.png" alt="message">
+							<div class="text">
+						        <p>В своём стремлении повысить качество жизни, они забывают, что понимание сути ресурсосберегающих технологий требует определения и уточнения новых предложений.</p>
+						        <div class="name">Ольга Константинова</div>
+						    </div>
+						</div>
+						<div class="single-feedback swiper-slide-feedback">
+							<img src="wp-content/themes/mms/assets/images/phone.png" alt="message">
+							<div class="text">
+						        <p>В своём стремлении повысить качество жизни, они забывают, что понимание сути ресурсосберегающих технологий требует определения и уточнения новых предложений.</p>
+						        <div class="name">Ольга Константинова</div>
+						    </div>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+    				<div class="swiper-pagination"></div>
+				</div>
 			</div>
-			 <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
-    </div>
-     <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
-  </div>
+ 			<!-- Initialize Swiper -->
+ 			<script>
+				var swiper = new Swiper('.swiper-container-feedback', {
+			    	pagination: {
+			        	el: '.swiper-pagination',
+        				clickable: true,
+          				renderBullet: function (index, className) {
+            				return '<span class="' + className + '">' + '</span>';
+          				},
+			      	},
+			    });
+			</script>
 		</section>
 
 		<section class="offices">
