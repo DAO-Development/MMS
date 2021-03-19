@@ -54,7 +54,7 @@ get_header();
 				</div>
 		</section>
 
-		<section class="promotions-block">
+		<section class="promotions-block" id="promotions-block">
 			<div class="container">
 				<h2>Акции</h2>
 				<div class="promotions">
@@ -86,7 +86,7 @@ get_header();
 			</div>
 		</section>
 
-		<section class="services-block">
+		<section class="services-block" id="services-block">
 			<div class="container">
 				<h2>Наши услуги</h2>
 				<div class="services">
@@ -154,9 +154,10 @@ get_header();
 			</div>			
 		</section>
 
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 				<h2>Наша история</h2>
+				<div class="image"></div>
 				<div class="text">
 					<p>   Здравствуйте, меня зовут Присяжнюк Иван. За моей спиной более 10 лет опыта работы массажистом. И я хочу поделиться с вами тем, с чего началась моя история.</p>
 					<p>   А началась она со спорта. С раннего детства я профессионально занимался тяжелой атлетикой и думал, что в этом и есть смысл моей жизнь. Но однажды, при случайных стечениях обстоятельств, на соревнованиях я получил тяжелую травму спины. После чего следовал долгий период восстановления, физиотерапии, массажа, ЛФК. Меня увлекла эта тема. И я начал изучать анатомию человека и процесс восстановления после травм</p>
@@ -164,11 +165,10 @@ get_header();
 					<p>   В 2010 году я демобилизовался, переехал в Москву и поступил в спортивный университет. Я успел поработать в ФОК Барвиха и Фитнес Мании. А потом мы с партнерами открыли сеть студий «Лаборатории Массажа», где я сам лично занимался отбором и обучением персонала.</p>
 					<p>   Я осознал, что именно массаж и помощь людям в обретении здорового тела – дело всей моей жизни. Наша задача – сделать вас здоровыми и красивыми. Для этого вам не придётся изнурять и мучать себя ежедневными тренировками, занимайтесь только тем, что приносит вам удовольствие. А мы поможем приобрести здоровое, упругое и красивое тело без ущерба вашему здоровью.</p>
 				</div>
-				<div class="image"></div>
 			</div>
 		</section>
 
-		<section class="specialists-block">
+		<section class="specialists-block" id="specialists-block">
 			<div class="container">
 				<h2>Наши специалисты</h2>
 				<div class="swiper-container-specialists">
@@ -198,7 +198,7 @@ get_header();
 										<h5><?php the_field('middle_name') ?></h5>
 									</div>
 									<p class="description"><?php the_field('description') ?></p>
-									<a class="btn-green">Записаться</a>
+									<a class="btn-yellow">Записаться</a>
 								</div>
 						    <?php
 						} ?>
@@ -211,6 +211,7 @@ get_header();
 
 			    <!-- Initialize Swiper -->
 			    <script>
+			    if (window.screen.width > 600){
 			      var swiper = new Swiper(".swiper-container-specialists", {
 			        slidesPerView: 3,
 			        spaceBetween: 70,
@@ -221,10 +222,22 @@ get_header();
 			        mousewheel: true,
 			        keyboard: true
 			      });
+			  	} else {
+			  	  var swiper = new Swiper(".swiper-container-specialists", {
+			        slidesPerView: 1,
+			        spaceBetween: 40,
+			        navigation: {
+			          nextEl: ".swiper-button-next",
+			          prevEl: ".swiper-button-prev"
+			        },
+			        mousewheel: true,
+			        keyboard: true
+			      });
+			  	}
 			    </script>
 		</section>
 
-		<section class="on-departure">
+		<section class="on-departure" id="on-departure">
 			<div class="container">
 				<h2>Массаж на выезд</h2>
 				<div class="content">
@@ -242,16 +255,16 @@ get_header();
 			<div class="container">
 				<h2>Отзывы о нас</h2>
 				<a class="btn-pink" href="форма с отзывами">Оставьте свой отзыв</a>
-				<div class="swiper-container-feedback feedback-slider-container">
+				<div class="swiper-container-feedback swiper-container feedback-slider-container">
 					<div class="feedback swiper-wrapper swipper-wrapper-feedback">
-						<div class="single-feedback swiper-slide-feedback">
+						<div class="single-feedback swiper-slide-feedback swiper-slide">
 							<img src="wp-content/themes/mms/assets/images/phone.png" alt="message">
 							<div class="text">
 						        <p>В своём стремлении повысить качество жизни, они забывают, что понимание сути ресурсосберегающих технологий требует определения и уточнения новых предложений.</p>
 						        <div class="name">Ольга Константинова</div>
 						    </div>
 						</div>
-						<div class="single-feedback swiper-slide-feedback">
+						<div class="single-feedback swiper-slide swiper-slide-feedback">
 							<img src="wp-content/themes/mms/assets/images/phone.png" alt="message">
 							<div class="text">
 						        <p>В своём стремлении повысить качество жизни, они забывают, что понимание сути ресурсосберегающих технологий требует определения и уточнения новых предложений.</p>
@@ -267,6 +280,7 @@ get_header();
  			<!-- Initialize Swiper -->
  			<script>
 				var swiper = new Swiper('.swiper-container-feedback', {
+					spaceBetween: 10,
 			    	pagination: {
 			        	el: '.swiper-pagination',
         				clickable: true,
@@ -278,16 +292,141 @@ get_header();
 			</script>
 		</section>
 
-		<section class="offices">
+		<section class="offices" id="offices">
 			<div class="container">
 				<h2>Наши офисы</h2>
+				<form>
+					<input type="radio" name="tab" id="tab1">
+					<label for="tab1">
+						<h5>Невский проспект, 53</h5>
+						<h5>ст. Горького</h5>
+					</label>
+					<input type="radio" checked name="tab" id="tab2">
+					<label for="tab2">		
+						<h5>Миклухо-Маклая, 18/1</h5>
+						<h5>ст. Большевиков</h5>
+					</label>
+					<input type="radio" name="tab" id="tab3">
+					<label for="tab3">
+						<h5>Ленина, 2</h5>
+						<h5>ст. Садовая</h5>
+					</label>
+					<div class="content-tab1 info-tab">
+						<div class="image">
+							<img src="wp-content/themes/mms/assets/images/map.png" alt="map">
+						</div>
+						<div class="office-info">
+							<h5>Адрес: </h5>
+							<p>Какой-то адрес </p>
+							<h5>Телефон: </h5>
+							<p>+7 (926) 729 49 42</p>
+						</div>
+						<div class="social">
+							<h5>Социальные сети</h5>
+							<div class="socials">
+								<a class="whatsapp social-link" href=""></a>
+								<a class="vk social-link" href=""></a>
+								<a class="instagram social-link" href=""></a>
+								<a class="facebook social-link" href=""></a>
+								<a class="telegram social-link" href=""></a>
+								<a class="youtube social-link" href=""></a>	
+							</div>
+						</div>
+						<a href="" class="btn-yellow">Записаться</a>
+					</div>
+					<div class="content-tab2 info-tab">				
+						<div class="image">
+							<img src="wp-content/themes/mms/assets/images/map.png" alt="map">
+						</div>
+						<div class="office-info">
+							<h5>Адрес: </h5>
+							<p>Какой-то адрес </p>
+							<h5>Телефон: </h5>
+							<p>+7 (926) 729 49 42</p>
+						</div>
+						<div class="social">
+							<h5>Социальные сети</h5>
+							<div class="socials">
+								<a class="whatsapp social-link" href=""></a>
+								<a class="vk social-link" href=""></a>
+								<a class="instagram social-link" href=""></a>
+								<a class="facebook social-link" href=""></a>
+								<a class="telegram social-link" href=""></a>
+								<a class="youtube social-link" href=""></a>	
+							</div>
+						</div>
+						<a href="" class="btn-yellow">Записаться</a>
+					</div>
+					<div class="content-tab3 info-tab">		
+						<div class="image">
+							<img src="wp-content/themes/mms/assets/images/map.png" alt="map">
+						</div>
+						<div class="office-info">
+							<h5>Адрес: </h5>
+							<p>Какой-то адрес </p>
+							<h5>Телефон: </h5>
+							<p>+7 (926) 729 49 42</p>
+						</div>
+						<div class="social">
+							<h5>Социальные сети</h5>
+							<div class="socials">
+								<a class="whatsapp social-link" href=""></a>
+								<a class="vk social-link" href=""></a>
+								<a class="instagram social-link" href=""></a>
+								<a class="facebook social-link" href=""></a>
+								<a class="telegram social-link" href=""></a>
+								<a class="youtube social-link" href=""></a>	
+							</div>
+						</div>
+						<a href="" class="btn-yellow">Записаться</a>
+					</div>
+					
+				</form>
 			</div>
 		</section>
 
 		<section class="instagram">
 			<div class="container">
 				<h2>Наш INSTAGRAM</h2>
+				<div class="swiper-container-ig swiper-container">
+					<div class="ig swiper-wrapper swipper-wrapper-ig">
+						<?php // параметры по умолчанию
+						$posts = get_posts( array(
+							'numberposts' => 0,
+							'category'    => 0,
+							'orderby'     => 'date',
+							'order'       => 'ASC',
+							'include'     => array(),
+							'exclude'     => array(),
+							'meta_key'    => '',
+							'meta_value'  =>'',
+							'post_type'   => 'instagram',
+							'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+						) );
+
+						foreach( $posts as $post ){
+							setup_postdata($post);?>
+						<div class="single-ig swiper-slide-ig swiper-slide">
+							<div class="image"><?php the_post_thumbnail('instagram'); ?></div>
+						</div>
+						<?php
+						} ?>
+					</div>
+					<!-- Add Pagination -->
+    				<div class="swiper-pagination"></div>
+				</div>
 			</div>
+						<!-- Initialize Swiper -->
+			  <script>
+			    var swiper = new Swiper('.swiper-container-ig', {
+			      slidesPerView: 3,
+			      spaceBetween: 30,
+			      pagination: {
+			        el: '.swiper-pagination',
+			        clickable: true,
+			      },
+			    });
+			  </script>
 		</section>
 
 
@@ -295,5 +434,4 @@ get_header();
 	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
 
-<?php
-get_footer();
+<?php get_footer();

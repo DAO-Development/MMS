@@ -16,10 +16,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Link Swiper's CSS 
-  	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">-->
-
   	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<?php wp_head(); ?>
 </head>
@@ -31,10 +29,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="logo">
-				<!--<?php the_custom_logo(); ?> 
-				<a href='<?php bloginfo('url') ?>'><img src="assets/images/MMS.jpg" width="80" height="80" alt="logo"></a>-->
-			</div>
+			<div class="logo"></div>
 
 			<?php wp_nav_menu( [
 				'theme_location'  => 'top',

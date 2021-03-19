@@ -33,9 +33,10 @@ if ( ! function_exists( 'mms_setup' ) ) :
 			)
 		);
 		
-		add_theme_support('post-thumbnails', array('post', 'promotions', 'services', 'specialists'));
+		add_theme_support('post-thumbnails', array('post', 'promotions', 'services', 'specialists', 'feedback', 'instagram', 'offices'));
 		add_image_size('promotions', 350, 490, false);
 		add_image_size('specialists', 294, 184, false);
+		add_image_size('instagram', 258, 432, false);
 
 	}
 endif;
@@ -69,6 +70,7 @@ add_action( 'widgets_init', 'mms_widgets_init' );*/
 
 function mms_scripts() {
 	wp_enqueue_style( 'mms-style', get_stylesheet_uri()/*, array(), _S_VERSION */);
+	wp_enqueue_style('slick-style', get_template_directory_uri(), '/slick.css');
 	// wp_style_add_data( 'mms-style', 'rtl', 'replace' );
 
 	// wp_enqueue_script( 'mms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -80,6 +82,9 @@ function mms_scripts() {
 
 function theme_register_nav_menu() {
 	register_nav_menu( 'top', 'Меню в шапке' );
+	register_nav_menu( 'footer-services', 'Меню в подвале Услуги' );
+	register_nav_menu( 'footer-info', 'Меню в подвале Информация' );
+	register_nav_menu( 'footer-company', 'Меню в подвале Компания' );
 }
 
 /*Регистрация нового типа постов для Акций*/
@@ -195,6 +200,120 @@ function register_post_types(){
 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'        => false,
 		'supports'            => [ 'title', 'editor', 'thumbnail', 'custom-fields'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => [],
+		'has_archive'         => false,
+		'rewrite'             => true,
+		'query_var'           => true,
+	] );
+	register_post_type( 'feedback', [
+		'label'  => null,
+		'labels' => [
+			'name'               => 'Отзывы', // основное название для типа записи
+			'singular_name'      => 'Отзыв', // название для одной записи этого типа
+			'add_new'            => 'Добавить отзыв', // для добавления новой записи
+			'add_new_item'       => 'Добавление отзыва', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование отзыва', // для редактирования типа записи
+			'new_item'           => 'Новый отзыв', // текст новой записи
+			'view_item'          => 'Смотреть отзыв', // для просмотра записи этого типа.
+			'search_items'       => 'Искать отзывы', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Отзывы', // название меню
+		],
+		'description'         => 'Отзывы о Mio Massage Studio',
+		'public'              => true,
+		// 'publicly_queryable'  => null, // зависит от public
+		// 'exclude_from_search' => null, // зависит от public
+		// 'show_ui'             => null, // зависит от public
+		// 'show_in_nav_menus'   => null, // зависит от public
+		'show_in_menu'        => true, // показывать ли в меню адмнки
+		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
+		'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+		'rest_base'           => null, // $post_type. C WP 4.7
+		'menu_position'       => 25,
+		'menu_icon'           => 'dashicons-testimonial',
+		//'capability_type'   => 'post',
+		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'        => false,
+		'supports'            => [ 'title', 'editor', 'thumbnail', 'custom-fields'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => [],
+		'has_archive'         => false,
+		'rewrite'             => true,
+		'query_var'           => true,
+	] );
+	register_post_type('instagram', [
+		'label'  => null,
+		'labels' => [
+			'name'               => 'Инстаграм', // основное название для типа записи
+			'singular_name'      => 'Инстаграм', // название для одной записи этого типа
+			'add_new'            => 'Добавить фото инстаграм', // для добавления новой записи
+			'add_new_item'       => 'Добавление фото Инстаграм', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование фото инстаграм', // для редактирования типа записи
+			'new_item'           => 'Новое фото инстаграм', // текст новой записи
+			'view_item'          => 'Смотреть фото инстаграм', // для просмотра записи этого типа.
+			'search_items'       => 'Искать фто инстаграм', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Instagram',
+		],
+		'description'         => 'Фото из инстаграма Mio Massage Studio',
+		'public'              => true,
+		// 'publicly_queryable'  => null, // зависит от public
+		// 'exclude_from_search' => null, // зависит от public
+		// 'show_ui'             => null, // зависит от public
+		// 'show_in_nav_menus'   => null, // зависит от public
+		'show_in_menu'        => true, // показывать ли в меню адмнки
+		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
+		'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+		'rest_base'           => null, // $post_type. C WP 4.7
+		'menu_position'       => 26,
+		'menu_icon'           => 'dashicons-instagram',
+		//'capability_type'   => 'post',
+		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'        => false,
+		'supports'            => ['title', 'thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => [],
+		'has_archive'         => false,
+		'rewrite'             => true,
+		'query_var'           => true,
+	] );
+	register_post_type('offices', [
+		'label'  => null,
+		'labels' => [
+			'name'               => 'Офисы', // основное название для типа записи
+			'singular_name'      => 'Офис', // название для одной записи этого типа
+			'add_new'            => 'Добавить офис', // для добавления новой записи
+			'add_new_item'       => 'Добавление офиса', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование офиса', // для редактирования типа записи
+			'new_item'           => 'Новый офис', // текст новой записи
+			'view_item'          => 'Смотреть офис', // для просмотра записи этого типа.
+			'search_items'       => 'Искать офисы', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Офисы',
+		],
+		'description'         => 'Офисы Mio Massage Studio',
+		'public'              => true,
+		// 'publicly_queryable'  => null, // зависит от public
+		// 'exclude_from_search' => null, // зависит от public
+		// 'show_ui'             => null, // зависит от public
+		// 'show_in_nav_menus'   => null, // зависит от public
+		'show_in_menu'        => true, // показывать ли в меню адмнки
+		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
+		'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+		'rest_base'           => null, // $post_type. C WP 4.7
+		'menu_position'       => 26,
+		'menu_icon'           => 'dashicons-admin-multisite',
+		//'capability_type'   => 'post',
+		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'        => false,
+		'supports'            => ['title', 'thumbnail', 'custom-field'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 		'taxonomies'          => [],
 		'has_archive'         => false,
 		'rewrite'             => true,
