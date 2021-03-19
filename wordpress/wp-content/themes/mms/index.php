@@ -415,23 +415,32 @@ get_header();
 					<!-- Add Pagination -->
     				<div class="swiper-pagination"></div>
 				</div>
+				<p><span>Следите за нами в нашем INSTAGRAM</span> <a href="">@miomassagestudio</a></p>
 			</div>
 						<!-- Initialize Swiper -->
 			  <script>
-			    var swiper = new Swiper('.swiper-container-ig', {
-			      slidesPerView: 3,
-			      spaceBetween: 30,
-			      pagination: {
-			        el: '.swiper-pagination',
-			        clickable: true,
-			      },
-			    });
+			  	if (window.screen.width > 600){
+				    var swiper = new Swiper('.swiper-container-ig', {
+				      slidesPerView: 3,
+				      spaceBetween: 30,
+				      pagination: {
+				        el: '.swiper-pagination',
+				        clickable: true,
+				      },
+				    });
+				} else {
+					var swiper = new Swiper('.swiper-container-ig', {
+				      slidesPerView: 3,
+				      pagination: {
+				        el: '.swiper-pagination',
+				        clickable: true,
+				      },
+				    });
+				}
 			  </script>
 		</section>
 
 
-	</main><!-- #main 	
-	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
+	</main><!-- #main -->
 
 <?php get_footer();

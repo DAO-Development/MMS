@@ -427,7 +427,6 @@ header .menu a {
 	width: 294px;
 	max-height: 416px;
 	background-color: #FFDAA6;
-	border: 1px solid rgba(102, 101, 101, 0.2);
 	border-radius: 4px;
 }
 
@@ -567,7 +566,6 @@ header .menu a {
     box-sizing: content-box;
 }
 
-/* вынести ширину в медиа */
 .swiper-slide-feedback {
 	width: 695px;
 	height: 130px;
@@ -576,86 +574,6 @@ header .menu a {
     position: relative;
     transition-property: transform;
     flex-shrink: 0;
-}
-
-/* Подвал */
-footer {
-	padding-top: 23px;
-	padding-bottom: 47px;
-	background-color: #E9E8ED;
-}
-
-.contacts .container {
-	display: table;
-	clear: both;
-	content: "";
-}
-
-.contacts .social {
-	float: left;
-	margin-left: 30px;
-}
-
-.social-link {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-}
-
-.contacts .phone {
-	float: right;
-	margin-right: 30px;
-}
-
-.contacts .phone .number {
-	font-weight: 700;
-}
-
-.main-footer .container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-
-}
-
-.main-footer .logo {
-	width: 146px;
-	height: 165px;
-	background-image: url('assets/images/MMS.png');
-	background-position: center;
-	background-size: 146px 165px;
-	background-repeat: no-repeat;
-}
-
-/* Instagram */
-.swiper-container-ig {
- 	position:relative;
- 	width: 100%;
- 	height: 100%;
- 	margin: auto;
- 	overflow:hidden;
- 	list-style:none;
- 	padding:0;
- 	z-index:1
- }
-
- .ig {
-	position:relative;
-	display: flex;
-	width:100%;
-	height:100%;
-	margin: 0 auto;
-	z-index:1;
-	transition-property:transform;
-}
-
-.single-ig .image {
-	width: 258px;
-	height: 432px;
-}
-
-.single-ig .image img{
-	height: 100%;
 }
 
 /* Наши офисы */
@@ -807,6 +725,148 @@ form input:checked + label>h5{
 	background-color: #FFDAA6;
 } 	
 
+/* Instagram */
+.swiper-container-ig {
+ 	position:relative;
+ 	width: 100%;
+ 	height: 100%;
+ 	margin: auto;
+ 	overflow:hidden;
+ 	list-style:none;
+ 	padding:0;
+ 	z-index:1
+ }
+
+ .ig {
+	position:relative;
+	display: flex;
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+	z-index:1;
+	transition-property:transform;
+}
+
+.single-ig .image {
+	width: 258px;
+	height: 432px;
+}
+
+.single-ig .image img{
+	height: 100%;
+}
+
+
+.instagram .swiper-slide{
+	margin: auto 0;
+	height: 70%;
+   	transform: scale(1);
+
+}
+
+.instagram p {
+	font-size: 24px;
+	line-height: 31px;
+	text-align: center;
+}
+
+.instagram a {
+	color: #666565;
+}
+
+.instagram a:hover {
+	text-decoration: none;
+}
+
+.instagram a:active {
+	text-decoration: none;
+	opacity: 0.3;
+}
+
+.instagram p a:after {
+	display: inline-block;
+	content: "";
+	width: 34px;
+	height: 34px;
+    margin-left: 8px;
+    margin-bottom: -7px;
+	background-image: url('assets/images/instagram-black.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.instagram .swiper-slide{
+
+	height: 100%;
+}
+.instagram .swiper-slide-next{
+	transition-duration: .3s; 
+   	transform: scale(1.3);
+   	z-index: 12412342;
+}
+
+
+.instagram .swiper-wrapper {
+	padding-top: 3rem;
+}
+
+.instagram .container{
+   	width: 840px;
+}
+
+.instagram .swiper-pagination{
+   	margin-top: 4rem;
+}
+
+/* Подвал */
+footer {
+	padding-top: 23px;
+	padding-bottom: 47px;
+	background-color: #E9E8ED;
+}
+
+.contacts .container {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.contacts .social {
+	float: left;
+	margin-left: 30px;
+}
+
+.social-link {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+
+.contacts .phone {
+	float: right;
+	margin-right: 30px;
+}
+
+.contacts .phone .number {
+	font-weight: 700;
+}
+
+.main-footer .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+.main-footer .logo {
+	width: 146px;
+	height: 165px;
+	background-image: url('assets/images/MMS.png');
+	background-position: center;
+	background-size: 146px 165px;
+	background-repeat: no-repeat;
+}
+
 /* Социальные сети */
 .whatsapp {
 	background-image: url('assets/images/whatsapp-black.png');
@@ -941,6 +1001,486 @@ h5 {
 	font-size: 22px;
 	line-height: 28px;
  }
+
+ /* Media styles
+ 	=========================================================================== */
+ 	@media screen and (max-width: 600px) {
+
+	header {
+		display: none;
+	}
+
+	body {
+		min-width: 100vw;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	body section .container {
+		margin-bottom: 0;
+	}
+
+	.container {
+		width: 90vw;
+		margin: 0 auto;
+		padding: 0 0;		
+	}
+
+	.promo {
+		height: 248px;
+		padding-top: 0;
+		background-size: 80px 90px;
+		background-image: url('assets/images/MMS.png');
+		background-color: #E9E8ED;
+		background-position: 2.5% 6%;
+		background-repeat: no-repeat;
+	}
+
+	.promo-title {
+		float: right;
+		width: 155px;
+		margin: 0;
+		font-size: 36px;
+		line-height: 42px;
+		text-align: right;
+	}
+
+	.promo-title:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+
+	.promo .description {
+		float: right;
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	.promo .description {		
+		display: table;
+		clear: both;
+		content: "";
+	}
+
+	.promo .btn-pink {
+		float: right;
+		height: 40px !important;
+	}
+
+	.promo .btn-pink:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+
+	.information {
+		width: 288px;
+		height: 168px;
+		padding-left: 9px;
+		flex-direction: column;
+		align-items: flex-start;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 21px;
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	.single-promotion {
+		width: 80%;
+		height: 80%;
+	}
+
+	.single-promotion img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.promo-btn {
+		bottom: 42px;
+		left: 31px;
+		width: 160px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.single-service {
+		width: 80%;
+		height: 450px;
+		margin-bottom: 12px;
+	}
+
+	.single-service img {
+		width: 100%;
+		height: 50%;
+	}
+
+	.single-service h5 {
+		margin: 5px;
+	}
+
+	.single-service ul {
+		margin-left: 20px;
+		padding: 0;
+	}
+
+	.single-service .cost-table {
+	    grid-template-columns: 40vw 30vw;
+	    left: 7px;
+	    bottom: 43px;
+	}
+
+	.single-service .cost, .cost-1-area, .duration, .cost-2-area, .cost-3-area {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.single-service .btn-pink {
+	    width: 115px;
+	    bottom: 10px;
+	    left: 30%;
+	}
+
+	.swiper-container-specialists {
+	 	width: 60vw;
+    	max-width: 300px;
+	 	max-height: 350px;
+	 }
+	 	
+	.swiper-wrapper-specialists {
+		margin: 0 0vw;	
+	    width: 100%;
+	}
+
+	.single-specialist {
+    	min-width: 60vw !important;
+		max-height: 320px;
+		margin: 0 auto ;
+	}
+
+	.single-specialist .experience {
+		position: absolute;
+		top: 87px;
+		left: 50px;
+		width: 120px;
+		height: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 10px;
+		line-height: 13px;
+	}
+
+	.single-specialist .image {
+		width: 100%;
+		height: auto;
+	}
+
+	.single-specialist .image img {
+	    width: 100%;
+	    height: auto;
+	}
+
+	.single-specialist h5 {
+		margin-left: 23px;
+	}
+
+	.single-specialist .description {
+	    top: 70%;
+	    left: -3%;
+		height: 60px;
+		padding: 0px 12px;
+		padding-right: 6px;
+		margin-top: 6px;
+	}
+
+	.single-specialist .btn-yellow {
+		right: -6px;
+		bottom: -11px;
+	}
+
+	.about .image {
+		position: absolute;
+		top: 10%;
+		right: 15%;
+		width: 34vw;
+		height: 19vw;
+		background-image: url('assets/images/about.png');
+		background-position: 50% 30%;
+		background-size: 130px 129px
+	}
+
+	.about {
+		position: relative;
+		padding-bottom: 5px;
+	}
+
+	.about .text {
+		width: 85vw;
+		font-size: 10px;
+		line-height: 12px; 
+	}
+
+	.about .text p:after {
+		display: none;
+	}
+
+	.about .text p:first-child {
+		margin-top: 9px;
+		width: 34vw;
+	}
+	.about .text p:last-child {
+		width: 85vw;
+	}
+
+	/*.about .text p:last-child:after {
+		display: none;
+	}*/
+
+	.on-departure .text {
+		max-width: 60vw;
+		font-size: 10px;
+		line-height: 12px;
+	}
+
+	.on-departure .image {
+		width: 94px;
+		height: 97px;
+		background-size: 94px 97px;
+	}
+
+	.on-departure a {
+		margin: 0 auto;
+	}
+
+	/* Отзывы */
+	.feedback-block {
+		position: relative;
+		padding-bottom: 50px;
+	}
+
+	.feedback-block .btn-pink {
+		position: absolute;
+		margin: 0 auto;
+		bottom: 3vw;
+		left: 27vw;
+	}
+
+	.feedback-block .swiper-container-feedback {
+		float: none;
+		max-width: 600px;
+	}
+
+	.single-feedback img {
+		width: 50%;
+		height: 105px;
+		display: inline-block;
+		margin-right: 16px;
+	}
+
+	.single-feedback .text {
+		width: 85vw;
+	}
+
+	.single-feedback .name {
+		margin-top: 5px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.offices .info-tab{
+		width: 84vw;
+		height: 40vw;
+		padding-top: 3vw;
+	}
+
+	.offices label{
+		width: 27.33vw;
+		height: 8vw;
+		padding-top: 1vw;
+		border-radius: 8px 8px 0px 0px;
+	}
+
+	.offices label h5:first-child {
+		font-size: 8px;
+		line-height: 10px;
+	}
+
+	.offices label h5 {
+		font-size: 10px;
+		line-height: 12px;
+	}
+
+	.offices .info-tab .image{
+		top: 5vw;
+		left: -1vw;
+		width: 33vw;
+		height: 50%;
+		border-radius: 0px 10px 10px 0px;
+	}
+
+	.offices .info-tab .image img {
+		top: 2vw;
+		left: 1.5vw;
+		width: 90%;
+		height: 85%;
+	}
+
+	.offices .info-tab .office-info {
+		width: 50vw;
+		height: 31vw;
+		margin-left: 20vw;
+		border: 1px solid #FFFFFF;
+	}
+
+	.offices .info-tab .office-info p {
+		margin-left: 30%;
+		margin-bottom: -3vw;
+		font-size: 10px;
+		line-height: 13px;
+	}
+
+	.offices .info-tab .office-info h5 {
+		margin-left: 30%;
+		margin-bottom: 0;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.offices .info-tab .office-info h5:first:child {
+		margin-top: 10%;
+	}
+
+	.offices .info-tab .social {
+		top: 15vw;
+		right: -1vw;
+		padding: 0 2vw 1vw;
+		border-radius: 10px 0px 0px 10px;
+	}
+
+	.offices .info-tab .social h5 {
+		margin: 1vw 0;
+		font-size: 8px;
+		line-height: 10px;
+	}
+
+	.offices .socials {
+		grid-row-gap: 1vw;
+	}
+
+	.offices .social-link {
+	    width: 12px;
+	    height: 12px;
+	    background-size: contain;
+    	justify-self: center;
+	}
+
+	.offices .info-tab .btn-yellow {
+		bottom: 2vw;
+		left: 45%;
+		width: 25vw;
+	}
+
+	.single-ig .image {
+		height: 50%;
+	}
+
+	.single-ig .image img{
+		width: 40vw;
+		height: 100%;
+	}
+
+	.instagram p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.instagram p span {
+		display: none;
+	}
+
+	.instagram p a:after {
+		width: 12px;
+		height: 12px;
+	    margin-left: 1px;
+	    margin-bottom: -3px;
+	    background-size: 12px 12px;
+	}
+
+	.instagram .swiper-slide{
+		height: 100%;
+	}
+
+	.instagram .container{
+	   	width: 100vw;
+	   	margin-bottom: 10vw;
+	}
+
+	footer {
+		padding-top: 25px;
+		padding-bottom: 23px;
+	}
+
+	footer .logo {
+		display: none;
+	}
+
+	.contacts .social {
+		margin-left: 0;
+		max-width: 45vw;
+	}
+
+	.contacts .phone {
+		margin-right: 0;
+		max-width: 45vw;
+	}
+
+	footer .menu:last-child {
+		max-width: 25vw;
+	}
+
+	footer .social-link {
+	    width: 16px;
+	    height: 16px;
+	    background-size: contain;		
+	}
+
+	.btn-pink {
+		width: 50vw;
+		height: 32px !important;
+	}
+
+	.btn-yellow {
+		width: 150px;
+		height: 8vw;
+	}
+
+	h2 {
+		margin-top: 15px;
+		margin-bottom: 10px;
+		padding-top: 0;
+		font-size: 22px;
+		line-height: 28px;
+	}
+
+	h4 {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	h5 {
+		font-size: 16px;
+		line-height: 21px;
+	}
+	
+	.swiper-button-next, .swiper-button-prev {
+		display: none !important;
+	}
+}
 
 /* Grouping content
 	 ========================================================================== */
@@ -1690,441 +2230,9 @@ textarea {
 	margin-bottom: 1.5em;
 }
 
-
-@media screen and (max-width: 600px) {
-
-	header {
-		display: none;
-	}
-
-	body {
-		min-width: 100vw;
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 18px;
-	}
-
-	body section .container {
-		margin-bottom: 0;
-	}
-
-	.container {
-		width: 90vw;
-		margin: 0 auto;
-		padding: 0 0;		
-	}
-
-	.promo {
-		height: 248px;
-		padding-top: 0;
-		background-size: 80px 90px;
-		background-image: url('assets/images/MMS.png');
-		background-color: #E9E8ED;
-		background-position: 2.5% 6%;
-		background-repeat: no-repeat;
-	}
-
-	.promo-title {
-		float: right;
-		width: 155px;
-		margin: 0;
-		font-size: 36px;
-		line-height: 42px;
-		text-align: right;
-	}
-
-	.promo-title:after {
-		display: table;
-		clear: both;
-		content: "";
-	}
-
-	.promo .description {
-		float: right;
-		margin-bottom: 10px;
-		font-size: 14px;
-		line-height: 21px;
-	}
-
-	.promo .description {		
-		display: table;
-		clear: both;
-		content: "";
-	}
-
-	.promo .btn-pink {
-		float: right;
-		height: 40px !important;
-	}
-
-	.promo .btn-pink:after {
-		display: table;
-		clear: both;
-		content: "";
-	}
-
-	.information {
-		width: 288px;
-		height: 168px;
-		padding-left: 9px;
-		flex-direction: column;
-		align-items: flex-start;
-		font-weight: 700;
-		font-size: 14px;
-		line-height: 21px;
-		box-shadow: none;
-		border-radius: 0;
-	}
-
-	.single-promotion {
-		width: 80%;
-		height: 80%;
-	}
-
-	.single-promotion img {
-		width: 100%;
-		height: 100%;
-	}
-
-	.promo-btn {
-		bottom: 42px;
-		left: 31px;
-		width: 160px;
-		font-size: 18px;
-		line-height: 22px;
-	}
-
-	.single-service {
-		width: 80%;
-		height: 450px;
-		margin-bottom: 12px;
-	}
-
-	.single-service img {
-		width: 100%;
-		height: 50%;
-	}
-
-	.single-service h5 {
-		margin: 5px;
-	}
-
-	.single-service ul {
-		margin-left: 20px;
-		padding: 0;
-	}
-
-	.single-service .cost-table {
-	    grid-template-columns: 40vw 30vw;
-	    left: 7px;
-	    bottom: 43px;
-	}
-
-	.single-service .cost, .cost-1-area, .duration, .cost-2-area, .cost-3-area {
-		font-weight: 700;
-		font-size: 12px;
-		line-height: 14px;
-	}
-
-	.single-service .btn-pink {
-	    width: 115px;
-	    bottom: 10px;
-	    left: 30%;
-	}
-
-	.swiper-container-specialists {
-	 	width: 90vw;
-    	max-width: 300px;
-	 	max-height: 320px;
-	 }
-	 	
-	.swiper-wrapper-specialists {
-		margin: 0 10vw;	
-	    width: 100%;
-	    max-height: 320px;
-	}
-
-	.single-specialist {
-    	width: 70vw !important;
-		max-height: 320px;
-		margin: 0 auto;
-	}
-
-	.single-specialist .experience {
-		position: absolute;
-		top: 87px;
-		left: 50px;
-		width: 120px;
-		height: 22px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 10px;
-		line-height: 13px;
-	}
-
-	.single-specialist .image {
-		width: 100%;
-		height: auto;
-	}
-
-	.single-specialist .image img {
-		width: 220px;
-		height: 126px;
-	}
-
-	.single-specialist h5 {
-		margin-left: 23px;
-	}
-
-	.single-specialist .description {
-		top: 191px;
-		left: -8px;
-		height: 60px;
-		padding: 0px 12px;
-		padding-right: 6px;
-		margin-top: 6px;
-	}
-
-	.single-specialist .btn-yellow {
-		right: -6px;
-		bottom: -11px;
-	}
-
-	.about .image {
-		position: absolute;
-		top: 13%;
-		right: 15%;
-		width: 34vw;
-		height: 15vw;
-		background-image: url('assets/images/about.png');
-		background-position: 50% 30%;
-		background-size: 130px 129px
-	}
-
-	.about {
-		position: relative;
-		padding-bottom: 5px;
-	}
-
-	.about .text {
-		width: 85vw;
-		font-size: 8px;
-		line-height: 12px; 
-	}
-
-	.about .text p:after {
-		display: none;
-	}
-
-	.about .text p:first-child {
-		margin-top: 9px;
-		width: 34vw;
-	}
-	.about .text p:last-child {
-		width: 85vw;
-	}
-
-	/*.about .text p:last-child:after {
-		display: none;
-	}*/
-
-	.on-departure .text {
-		max-width: 60vw;
-		font-size: 10px;
-		line-height: 12px;
-	}
-
-	.on-departure .image {
-		width: 94px;
-		height: 97px;
-		background-size: 94px 97px;
-	}
-
-	.on-departure a {
-		margin: 0 auto;
-	}
-
-	/* Отзывы */
-	.feedback-block {
-		position: relative;
-		padding-bottom: 50px;
-	}
-
-	.feedback-block .btn-pink {
-		position: absolute;
-		margin: 0 auto;
-		bottom: 3vw;
-		left: 27vw;
-	}
-
-	.feedback-block .swiper-container-feedback {
-		float: none;
-		max-width: 600px;
-	}
-
-	.single-feedback img {
-		width: 50%;
-		height: 105px;
-		display: inline-block;
-		margin-right: 16px;
-	}
-
-	.single-feedback .text {
-		width: 85vw;
-	}
-
-	.single-feedback .name {
-		margin-top: 5px;
-		font-size: 14px;
-		line-height: 18px;
-	}
-
-	.offices .info-tab{
-		width: 84vw;
-		height: 50vw;
-		padding-top: 3vw;
-	}
-
-	.offices label{
-		width: 27vw;
-		height: 8vw;
-		padding-top: 1vw;
-		border-radius: 8px 8px 0px 0px;
-	}
-
-	.offices label h5:first-child {
-		font-size: 8px;
-		line-height: 10px;
-	}
-
-	.offices label h5 {
-		font-size: 10px;
-		line-height: 12px;
-	}
-
-	.offices .info-tab .image{
-		top: 5vw;
-		left: -1vw;
-		width: 33vw;
-		height: 50%;
-	}
-
-	.offices .info-tab .image img {
-		top: 2vw;
-		left: 1.5vw;
-		width: 90%;
-		height: 85%;
-	}
-
-	.offices .info-tab .office-info {
-		width: 50vw;
-		height: 45vw;
-		margin-left: 20vw;
-	}
-
-	.offices .info-tab .office-info p {
-		margin-left: 213px;
-		margin-bottom: 10px;
-		font-size: 10px;
-		line-height: 12px;
-	}
-
-	.offices .info-tab .office-info h5 {
-		margin-left: 25%;
-		margin-bottom: 0;
-		font-size: 12px;
-		line-height: 15px;
-	}
-
-	.offices .info-tab .office-info h5:first:child {
-		margin-top: 10%;
-	}
-
-	.offices .info-tab .social {
-		top: 15vw;
-		right: -1vw;
-		padding: 0 2vw;
-		border-radius: 10px 0px 0px 10px;
-	}
-
-	.offices .info-tab .social h5 {
-		margin: 2vw 0;
-		font-size: 8px;
-		line-height: 10px;
-	}
-
-	.offices .socials {
-		grid-row-gap: 1vw;
-	}
-
-	.offices .social-link {
-	    width: 50%;
-	    height: 50%;
-	    background-size: contain;
-	}
-
-	.offices .info-tab .btn-yellow {
-		bottom: 4vw;
-		right: 45vw;
-	}
-
-	/* Меню */
-	footer .menu {
-		display: block;
-	}
-
-	footer h4 {
-		margin: 0;
-	}
-
-	footer .menu h4 {
-		margin-bottom: 10px;
-	}
-
-	footer .menu ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	footer .menu a {
-		color: #666565;
-		text-decoration: none;
-	}
-
-	.btn-pink {
-		width: 50vw;
-		height: 32px;
-	}
-
-	.instagram {
-		display: none;
-	}
-
-	h2 {
-		margin-top: 15px;
-		margin-bottom: 10px;
-		padding-top: 0;
-		font-size: 22px;
-		line-height: 28px;
-	}
-
-	h4 {
-		font-size: 14px;
-		line-height: 18px;
-	}
-
-	h5 {
-		font-size: 16px;
-		line-height: 21px;
-	}
-
-}
-
 /* Swipper styles */
 :root {
-	--swiper-theme-color:#FFCC99;
+	--swiper-theme-color:#FFDAA6;
 }
 
 
@@ -2200,34 +2308,3 @@ textarea {
     display: flex;
     transition-property: transform;
 }
-.instagram .swiper-slide{
-	margin: auto 0;
-	height: 70%;
-   	transform: scale(1);
-
-}
-
-.instagram .swiper-slide{
-
-	height: 100%;
-}
-.instagram .swiper-slide-next{
-	transition-duration: .3s; 
-   	transform: scale(1.3);
-   	z-index: 12412342;
-}
-
-
-.instagram .swiper-wrapper {
-	padding-top: 3rem;
-}
-
-
-/*-------------------------------------------------------------------*/
-
-    .instagram .container{
-    	width: 840px;
-    }
-    .instagram .swiper-pagination{
-    	margin-top: 4rem;
-    }

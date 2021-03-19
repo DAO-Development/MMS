@@ -24,7 +24,7 @@
 						<a class="youtube social-link" href=""></a>	
 					</div>
 					<div class="phone">
-						<h4>Наш контактный телефон</h4>
+						<h4>Наш контактный телефон:</h4>
 						<p class="number">+7 (926) 729 49 42</p>
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 						'theme_location'  => 'footer-company',
 						'menu'            => 'Меню в подвале Компания', 
 						'container'       => 'nav',
-						'container_class' => 'menu',
+						'container_class' => '',
 						'menu_class'      => '',
 						'items_wrap'      => '<ul>%3$s</ul>',
 						'depth'           => 0,
