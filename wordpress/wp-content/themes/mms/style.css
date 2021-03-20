@@ -111,8 +111,8 @@ body {
 	padding: 0 0;
 }
 
-body section .container {
-	margin-bottom: 30px;
+body section {
+	margin-bottom: 75px;
 }
 
 /* Шапка */
@@ -132,7 +132,7 @@ header .logo {
 /* Меню */
 header .menu {
 	display: block;
-	width: 800px;
+	width: 845px;
 	float: right;
 	margin-top: 22px;
 }
@@ -141,7 +141,7 @@ header .menu ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	padding: 0;
 	list-style: none;
@@ -164,7 +164,7 @@ header .menu a {
 /* Изображение с главной страницы */
 .promo {
 	height: 448px;
-	padding-top: 55px;
+	padding-top: 11px;
 	background-image: url('assets/images/main.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -196,10 +196,11 @@ header .menu a {
 	width: 1016px;
 	height: 70px;
 	margin: 0 auto;
-	margin-top: -35px;
+	margin-top: -48px;
+	padding: 0 30px;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	font-weight: 700;
 	background-color: #FFC0CB;
@@ -230,7 +231,6 @@ header .menu a {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-
 }
 
 .single-promotion {
@@ -358,7 +358,6 @@ header .menu a {
 	content: "";
 }
 
-/*вынести ширину в медиа*/
 .about .text {
 	float: left;
 	width: 784px;
@@ -376,12 +375,11 @@ header .menu a {
 	background-repeat: no-repeat;
 }
 
-/* вынести ширину в медиа */
-.about .text p:last-child {
+.about .text p:nth-child(5) {
 	width: 1140px;
 }
 
-.about .text p:last-child:after {
+.about .text p:nth-child(5):after {
 	display: none;
 }
 
@@ -390,6 +388,15 @@ header .menu a {
 	width: 317px;
 	height: 311px;
 	background-image: url('assets/images/about.png');
+	background-repeat: no-repeat;
+}
+
+.about input {
+	display: none;
+}
+
+.about label {
+	display: none;
 }
 
 /* Специалисты */
@@ -488,6 +495,7 @@ header .menu a {
 .on-departure .text {
 	float: left;
 	max-width: 700px;
+	padding-top: 20px;
 	font-size: 22px;
 	line-height: 28px;
 }
@@ -507,7 +515,7 @@ header .menu a {
 /* Отзывы */
 .feedback-block {
 	background-color: #E9E8ED;
-	padding-bottom: 48px;
+	padding-bottom: 28px;
 }
 
 .feedback-block .container::after {
@@ -533,9 +541,9 @@ header .menu a {
 	margin-right: 35px;
 }
 
-/* вынести ширину в медиа */
 .single-feedback .text {
 	width: 552px;
+	padding-top: 20px;
 }
 
 .single-feedback .name {
@@ -624,9 +632,6 @@ header .menu a {
 	color: #FFFFFF;
 }
 
-.offices .info-tab {
-}
-
 .offices .info-tab .image{
 	position: absolute;
 	top: 50px;
@@ -664,7 +669,7 @@ header .menu a {
 }
 
 .offices .info-tab .office-info h5:first:child {
-	margin-top: 57px;
+	margin-top: 50px;
 }
 
 .offices .info-tab .social {
@@ -705,11 +710,11 @@ header .menu a {
 #tab1:checked ~  .content-tab1{
 	display: block;
 }
-form input:checked + label {
+.offices form input:checked + label {
 	transition-duration: .3s;
 	background-color: #FFDAA6;
 }
-form input:checked + label>h5{
+.offices form input:checked + label>h5{
 	color: #666565;
 }
 #tab2:checked ~  .content-tab2{
@@ -724,6 +729,10 @@ form input:checked + label>h5{
 #tab3:checked {
 	background-color: #FFDAA6;
 } 	
+
+.offices {
+	margin-bottom: 25px;
+}
 
 /* Instagram */
 .swiper-container-ig {
@@ -836,10 +845,8 @@ footer {
 	margin-left: 30px;
 }
 
-.social-link {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
+.contacts .social .social-link {
+	margin-right: 7px;
 }
 
 .contacts .phone {
@@ -868,6 +875,12 @@ footer {
 }
 
 /* Социальные сети */
+.social-link {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+
 .whatsapp {
 	background-image: url('assets/images/whatsapp-black.png');
 	background-position: center;
@@ -982,6 +995,7 @@ p {
 
 h2 {
 	margin: 0;
+	margin-bottom: 10px;
 	padding-top: 25px;
 	text-align: center;
 	font-weight: 400;
@@ -1004,7 +1018,7 @@ h5 {
 
  /* Media styles
  	=========================================================================== */
- 	@media screen and (max-width: 600px) {
+ @media screen and (max-width: 600px) {
 
 	header {
 		display: none;
@@ -1017,7 +1031,7 @@ h5 {
 		line-height: 18px;
 	}
 
-	body section .container {
+	body section {
 		margin-bottom: 0;
 	}
 
@@ -1079,7 +1093,7 @@ h5 {
 	.information {
 		width: 288px;
 		height: 168px;
-		padding-left: 9px;
+		padding: 10px;
 		flex-direction: column;
 		align-items: flex-start;
 		font-weight: 700;
@@ -1203,43 +1217,74 @@ h5 {
 		bottom: -11px;
 	}
 
-	.about .image {
-		position: absolute;
-		top: 10%;
-		right: 15%;
-		width: 34vw;
-		height: 19vw;
-		background-image: url('assets/images/about.png');
-		background-position: 50% 30%;
-		background-size: 130px 129px
-	}
-
 	.about {
 		position: relative;
 		padding-bottom: 5px;
 	}
 
+	.about .image {
+		float: none;
+		width: 40vw;
+		height: 40vw;
+		margin: 0 auto;
+		background-image: url('assets/images/about.png');
+		background-position: 50% 30%;
+		background-size: 40vw 40vw;
+	}
+
 	.about .text {
+		float: none;
 		width: 85vw;
+		margin: 0;
+		padding: 5px 0;
 		font-size: 10px;
 		line-height: 12px; 
+		text-align: justify;
+
 	}
 
 	.about .text p:after {
 		display: none;
 	}
 
-	.about .text p:first-child {
-		margin-top: 9px;
-		width: 34vw;
-	}
-	.about .text p:last-child {
+	.about .text p:nth-child(5) {
 		width: 85vw;
 	}
 
-	/*.about .text p:last-child:after {
+	.about .text p:nth-child(3){
 		display: none;
-	}*/
+  		transition: .5s;
+	}
+	.about .text p:nth-child(4){
+		display: none;
+	} 
+	.about .text p:nth-child(5) {
+		display: none;
+	}
+
+	.about input {
+		display: block;
+	}
+
+	.about label {
+		display: block;
+		margin: 0 auto;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	#read:checked + .about .text p:nth-child(3) {
+		display: block;
+	}
+	#read:checked ~ .about .text p:nth-child(4) {
+		display: block;
+	}
+	#read:checked ~ .about .text p:nth-child(5) {
+		display: block;
+	}
+	#read:checked ~ #read, #read:checked ~ .about label {
+		display: none;
+	}
 
 	.on-departure .text {
 		max-width: 60vw;
