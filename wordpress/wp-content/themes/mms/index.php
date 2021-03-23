@@ -21,7 +21,9 @@ get_header();
 			<div class="container">
 				<h1 class="promo-title"><?php bloginfo('name'); ?></h1>
 				<p class="description"><?php bloginfo('description'); ?></p>
-				<a class="btn-pink" href="https://n243750.yclients.com/company:239171">Записаться на сеанс</a>
+				<a class="btn-pink ms_booking" href="">Записаться на сеанс</a>
+				<!-- YCLIENTS -->
+				<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 			</div>
 		</section>
 
@@ -77,7 +79,9 @@ get_header();
 							<div class="single-promotion">
 								<?php the_post_thumbnail('promotions'); ?>
 								<?php if (strcmp(get_the_title(), "Подарочный сертификат") == 0) : ?>
-									<a class="promo-btn" href="#">Узнать подробнее</a>
+									<a class="promo-btn ms_booking" href="#">Узнать подробнее</a>									
+									<!-- YCLIENTS -->
+									<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 								<?php endif; ?>
 							</div>
 					    <?php
@@ -146,7 +150,9 @@ get_header();
 									<?php endif; ?>
 								</div>
 
-								<a class="btn-pink" href="ссылка_на_запись">Записаться</a>
+								<a class="btn-pink ms_booking" href="#">Записаться</a>								
+								<!-- YCLIENTS -->
+								<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 							</div>
 					    <?php
 					} ?>
@@ -158,19 +164,20 @@ get_header();
 			<div class="container">
 				<h2>Наша история</h2>
 				<div class="image"></div>
-					<div class="text">
-						<p>   Здравствуйте, меня зовут Присяжнюк Иван. За моей спиной более 10 лет опыта работы массажистом. И я хочу поделиться с вами тем, с чего началась моя история.</p>
-						<p>   А началась она со спорта. С раннего детства я профессионально занимался тяжелой атлетикой и думал, что в этом и есть смысл моей жизнь. Но однажды, при случайных стечениях обстоятельств, на соревнованиях я получил тяжелую травму спины. После чего следовал долгий период восстановления, физиотерапии, массажа, ЛФК. Меня увлекла эта тема. И я начал изучать анатомию человека и процесс восстановления после травм</p>
-						<p>   Я параллельно учился в спортивном колледже и медицинском. В вечернее время я посещал курсы массажа, практиковался на родных и близких. Но по-настоящему моя карьера массажиста началась в армии. На территории спортзала я смастерил кушетку и делал послетренировочный восстановительный массаж за конфеты и сладости, которых так не хватало в армии.</p>
-						<p>   В 2010 году я демобилизовался, переехал в Москву и поступил в спортивный университет. Я успел поработать в ФОК Барвиха и Фитнес Мании. А потом мы с партнерами открыли сеть студий «Лаборатории Массажа», где я сам лично занимался отбором и обучением персонала.</p>
-						<p>   Я осознал, что именно массаж и помощь людям в обретении здорового тела – дело всей моей жизни. Наша задача – сделать вас здоровыми и красивыми. Для этого вам не придётся изнурять и мучать себя ежедневными тренировками, занимайтесь только тем, что приносит вам удовольствие. А мы поможем приобрести здоровое, упругое и красивое тело без ущерба вашему здоровью.</p>
-					</div>
-				<form>
-					<input type="checkbox" id="read">
-					<label for="read">
+				<div class="text">
+					<p>   Здравствуйте, меня зовут Присяжнюк Иван. За моей спиной более 10 лет опыта работы массажистом. И я хочу поделиться с вами тем, с чего началась моя история.</p>
+					<p>   А началась она со спорта. С раннего детства я профессионально занимался тяжелой атлетикой и думал, что в этом и есть смысл моей жизнь. Но однажды, при случайных стечениях обстоятельств, на соревнованиях я получил тяжелую травму спины. После чего следовал долгий период восстановления, физиотерапии, массажа, ЛФК. Меня увлекла эта тема. И я начал изучать анатомию человека и процесс восстановления после травм</p>		
+						<input type="checkbox" id="read">
+						<label id="readmore" for="read">
 						Читать дальше...
-					</label>
-				</form>
+						</label>
+					<p>   Я параллельно учился в спортивном колледже и медицинском. В вечернее время я посещал курсы массажа, практиковался на родных и близких. Но по-настоящему моя карьера массажиста началась в армии. На территории спортзала я смастерил кушетку и делал послетренировочный восстановительный массаж за конфеты и сладости, которых так не хватало в армии.</p>
+					<p>   В 2010 году я демобилизовался, переехал в Москву и поступил в спортивный университет. Я успел поработать в ФОК Барвиха и Фитнес Мании. А потом мы с партнерами открыли сеть студий «Лаборатории Массажа», где я сам лично занимался отбором и обучением персонала.</p>
+					<p>   Я осознал, что именно массаж и помощь людям в обретении здорового тела – дело всей моей жизни. Наша задача – сделать вас здоровыми и красивыми. Для этого вам не придётся изнурять и мучать себя ежедневными тренировками, занимайтесь только тем, что приносит вам удовольствие. А мы поможем приобрести здоровое, упругое и красивое тело без ущерба вашему здоровью.</p>
+						<label id="noreadmore" for="read">
+						Скрыть
+						</label>
+				</div>
 			</div>
 		</section>
 
@@ -204,7 +211,9 @@ get_header();
 										<h5><?php the_field('middle_name') ?></h5>
 									</div>
 									<p class="description"><?php the_field('description') ?></p>
-									<a class="btn-yellow">Записаться</a>
+									<a class="btn-yellow ms_booking" href="#">Записаться</a>
+									<!-- YCLIENTS -->
+									<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 								</div>
 						    <?php
 						} ?>
@@ -212,6 +221,8 @@ get_header();
 			    	<div class="swiper-button-next"></div>
 			    	<div class="swiper-button-prev"></div>
 				</div>
+				<!-- Add Pagination -->
+    				<div class="swiper-pagination"></div>
 			</div>
 		     
 
@@ -232,10 +243,10 @@ get_header();
 			  	  var swiper = new Swiper(".swiper-container-specialists", {
 			        slidesPerView: 1,
 			        spaceBetween: 40,
-			        navigation: {
-			          nextEl: ".swiper-button-next",
-			          prevEl: ".swiper-button-prev"
-			        },
+			        pagination: {
+			        	el: '.swiper-pagination',
+        				clickable: true,
+        			},
 			        mousewheel: true,
 			        keyboard: true
 			      });
@@ -253,7 +264,9 @@ get_header();
 					</div>
 					<div class="image"></div>
 				</div>
-				<a class="btn-pink" href="ссылка на запись">Оставить заявку</a>
+				<a class="btn-pink ms_booking" href="#">Оставить заявку</a>				
+				<!-- YCLIENTS -->
+				<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 			</div>
 		</section>
 
@@ -263,20 +276,31 @@ get_header();
 				<a class="btn-pink" href="форма с отзывами">Оставьте свой отзыв</a>
 				<div class="swiper-container-feedback swiper-container feedback-slider-container">
 					<div class="feedback swiper-wrapper swipper-wrapper-feedback">
-						<div class="single-feedback swiper-slide-feedback swiper-slide">
-							<img src="wp-content/themes/mms/assets/images/phone.png" alt="message">
-							<div class="text">
-						        <p>В своём стремлении повысить качество жизни, они забывают, что понимание сути ресурсосберегающих технологий требует определения и уточнения новых предложений.</p>
-						        <div class="name">Ольга Константинова</div>
+						<?php // параметры по умолчанию
+						$posts = get_posts( array(
+							'numberposts' => 5,
+							'category'    => 0,
+							'orderby'     => 'date',
+							'order'       => 'ASC',
+							'include'     => array(),
+							'exclude'     => array(),
+							'meta_key'    => '',
+							'meta_value'  =>'',
+							'post_type'   => 'feedback',
+							'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+						) );
+
+						foreach( $posts as $post ){
+							setup_postdata($post);?>
+								<div class="single-feedback swiper-slide-feedback swiper-slide">
+									<?php the_post_thumbnail(); ?>
+									<div class="text">
+						        <?php the_field('feedback') ?>
+						        <div class="name"><?php the_field('client') ?></div>
 						    </div>
-						</div>
-						<div class="single-feedback swiper-slide swiper-slide-feedback">
-							<img src="wp-content/themes/mms/assets/images/phone.png" alt="message">
-							<div class="text">
-						        <p>В своём стремлении повысить качество жизни, они забывают, что понимание сути ресурсосберегающих технологий требует определения и уточнения новых предложений.</p>
-						        <div class="name">Ольга Константинова</div>
-						    </div>
-						</div>
+								</div>
+						    <?php
+						} ?>
 					</div>
 					<!-- Add Pagination -->
     				<div class="swiper-pagination"></div>
@@ -286,7 +310,7 @@ get_header();
  			<!-- Initialize Swiper -->
  			<script>
 				var swiper = new Swiper('.swiper-container-feedback', {
-					spaceBetween: 10,
+					spaceBetween: 15,
 			    	pagination: {
 			        	el: '.swiper-pagination',
         				clickable: true,
@@ -333,12 +357,14 @@ get_header();
 								<a class="whatsapp social-link" href="https://api.whatsapp.com/send?phone=79267294942&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%B0%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F..."></a>
 								<a class="vk social-link" href=""></a>
 								<a class="instagram social-link" href="https://www.instagram.com/mms_massage/"></a>
-								<a class="facebook social-link" href=""></a>
-								<a class="telegram social-link" href=""></a>
-								<a class="youtube social-link" href=""></a>	
+								<a class="facebook social-link" href="https://www.facebook.com/mmsmassage/"></a>
+								<a class="telegram social-link" href="https://t.me/Massagist_Ivan"></a>
+								<a class="youtube social-link" href="https://youtube.com/channel/UCUb09LVy9nh6mE8VKfT1buA"></a>	
 							</div>
 						</div>
-						<a href="" class="btn-yellow">Записаться</a>
+						<a href="#" class="btn-yellow ms_booking">Записаться</a>
+						<!-- YCLIENTS -->
+						<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 					</div>
 					<div class="content-tab2 info-tab">				
 						<div class="image">
@@ -356,12 +382,14 @@ get_header();
 								<a class="whatsapp social-link" href="https://api.whatsapp.com/send?phone=79267294942&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%B0%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F..."></a>
 								<a class="vk social-link" href=""></a>
 								<a class="instagram social-link" href="https://www.instagram.com/mms_massage/"></a>
-								<a class="facebook social-link" href=""></a>
-								<a class="telegram social-link" href=""></a>
-								<a class="youtube social-link" href=""></a>	
+								<a class="facebook social-link" href="https://www.facebook.com/mmsmassage/"></a>
+								<a class="telegram social-link" href="https://t.me/Massagist_Ivan"></a>
+								<a class="youtube social-link" href="https://youtube.com/channel/UCUb09LVy9nh6mE8VKfT1buA"></a>	
 							</div>
 						</div>
-						<a href="" class="btn-yellow">Записаться</a>
+						<a href="#" class="btn-yellow ms_booking">Записаться</a>					
+						<!-- YCLIENTS -->
+						<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 					</div>
 					<div class="content-tab3 info-tab">		
 						<div class="image">
@@ -379,12 +407,14 @@ get_header();
 								<a class="whatsapp social-link" href="https://api.whatsapp.com/send?phone=79267294942&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%B0%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F..."></a>
 								<a class="vk social-link" href=""></a>
 								<a class="instagram social-link" href="https://www.instagram.com/mms_massage/"></a>
-								<a class="facebook social-link" href=""></a>
-								<a class="telegram social-link" href=""></a>
-								<a class="youtube social-link" href=""></a>	
+								<a class="facebook social-link" href="https://www.facebook.com/mmsmassage/"></a>
+								<a class="telegram social-link" href="https://t.me/Massagist_Ivan"></a>
+								<a class="youtube social-link" href="https://youtube.com/channel/UCUb09LVy9nh6mE8VKfT1buA"></a>	
 							</div>
 						</div>
-						<a href="" class="btn-yellow">Записаться</a>
+						<a href="#" class="btn-yellow ms_booking">Записаться</a>
+						<!-- YCLIENTS -->
+						<script type="text/javascript" src="//w243750.yclients.com/widgetJS" charset="UTF-8"></script>
 					</div>
 					
 				</form>
