@@ -218,13 +218,12 @@ get_header();
 						    <?php
 						} ?>
 					</div>
-			    	<div class="swiper-button-next"></div>
-			    	<div class="swiper-button-prev"></div>
-				</div>
-				<!-- Add Pagination -->
+			    	<!--<div class="swiper-button-next"></div>
+			    	<div class="swiper-button-prev"></div>	-->		    	
+						<!-- Add Pagination -->
     				<div class="swiper-pagination"></div>
-			</div>
-		     
+				</div>
+			</div>     
 
 			    <!-- Initialize Swiper -->
 			    <script>
@@ -236,6 +235,10 @@ get_header();
 			          nextEl: ".swiper-button-next",
 			          prevEl: ".swiper-button-prev"
 			        },
+			        pagination: {
+			        	el: '.swiper-pagination',
+        				clickable: true,
+        			},
 			        mousewheel: true,
 			        keyboard: true
 			      });
